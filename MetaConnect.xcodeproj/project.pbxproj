@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13160CB828343D81005B409A /* MetaConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CB728343D81005B409A /* MetaConnectApp.swift */; };
+		13160CBC28343D83005B409A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13160CBB28343D83005B409A /* Assets.xcassets */; };
+		13160CBF28343D83005B409A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13160CBE28343D83005B409A /* Preview Assets.xcassets */; };
+		13160CC928343D84005B409A /* MetaConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CC828343D84005B409A /* MetaConnectTests.swift */; };
+		13160CD328343D84005B409A /* MetaConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CD228343D84005B409A /* MetaConnectUITests.swift */; };
+		13160CD528343D84005B409A /* MetaConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */; };
+		13160CE228343DA8005B409A /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE128343DA8005B409A /* ConnectionView.swift */; };
+		13160CE428343DB3005B409A /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE328343DB3005B409A /* ConnectionViewModel.swift */; };
+		13160CEE28343DC4005B409A /* WalletConnectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE728343DC4005B409A /* WalletConnectManager.swift */; };
+		13160CEF28343DC4005B409A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE928343DC4005B409A /* Color+Ext.swift */; };
+		13160CF028343DC4005B409A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CEB28343DC4005B409A /* Alert.swift */; };
+		13160CF128343DC4005B409A /* WCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CEC28343DC4005B409A /* WCError.swift */; };
+		13160CF228343DC4005B409A /* WCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CED28343DC4005B409A /* WCAlert.swift */; };
+		13160CFA28343DE2005B409A /* MMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF528343DE2005B409A /* MMButton.swift */; };
+		13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF728343DE2005B409A /* WCAlertView.swift */; };
+		13160CFC28343DE2005B409A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF928343DE2005B409A /* LoadingView.swift */; };
+		13160D0128343E65005B409A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13160D0028343E65005B409A /* WalletConnectSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13160CC528343D84005B409A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13160CAC28343D81005B409A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13160CB328343D81005B409A;
+			remoteInfo = MetaConnect;
+		};
+		13160CCF28343D84005B409A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13160CAC28343D81005B409A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13160CB328343D81005B409A;
+			remoteInfo = MetaConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13160CB428343D81005B409A /* MetaConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13160CB728343D81005B409A /* MetaConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectApp.swift; sourceTree = "<group>"; };
+		13160CBB28343D83005B409A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13160CBE28343D83005B409A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		13160CC428343D84005B409A /* MetaConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetaConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13160CC828343D84005B409A /* MetaConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectTests.swift; sourceTree = "<group>"; };
+		13160CCE28343D84005B409A /* MetaConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetaConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13160CD228343D84005B409A /* MetaConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectUITests.swift; sourceTree = "<group>"; };
+		13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13160CE128343DA8005B409A /* ConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		13160CE328343DB3005B409A /* ConnectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
+		13160CE728343DC4005B409A /* WalletConnectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletConnectManager.swift; sourceTree = "<group>"; };
+		13160CE928343DC4005B409A /* Color+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		13160CEB28343DC4005B409A /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		13160CEC28343DC4005B409A /* WCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCError.swift; sourceTree = "<group>"; };
+		13160CED28343DC4005B409A /* WCAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCAlert.swift; sourceTree = "<group>"; };
+		13160CF528343DE2005B409A /* MMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMButton.swift; sourceTree = "<group>"; };
+		13160CF728343DE2005B409A /* WCAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCAlertView.swift; sourceTree = "<group>"; };
+		13160CF928343DE2005B409A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		13160D0B2834D4AD005B409A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13160CB128343D81005B409A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13160D0128343E65005B409A /* WalletConnectSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13160CC128343D84005B409A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13160CCB28343D84005B409A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13160CAB28343D81005B409A = {
+			isa = PBXGroup;
+			children = (
+				13160D0B2834D4AD005B409A /* README.md */,
+				13160CB628343D81005B409A /* MetaConnect */,
+				13160CC728343D84005B409A /* MetaConnectTests */,
+				13160CD128343D84005B409A /* MetaConnectUITests */,
+				13160CB528343D81005B409A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13160CB528343D81005B409A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13160CB428343D81005B409A /* MetaConnect.app */,
+				13160CC428343D84005B409A /* MetaConnectTests.xctest */,
+				13160CCE28343D84005B409A /* MetaConnectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13160CB628343D81005B409A /* MetaConnect */ = {
+			isa = PBXGroup;
+			children = (
+				13160CFE28343DF4005B409A /* Models */,
+				13160CFD28343DEC005B409A /* Screens */,
+				13160CE528343DC4005B409A /* Utilities */,
+				13160CF328343DE2005B409A /* Views */,
+				13160CB728343D81005B409A /* MetaConnectApp.swift */,
+				13160CE128343DA8005B409A /* ConnectionView.swift */,
+				13160CE328343DB3005B409A /* ConnectionViewModel.swift */,
+				13160CBB28343D83005B409A /* Assets.xcassets */,
+				13160CBD28343D83005B409A /* Preview Content */,
+			);
+			path = MetaConnect;
+			sourceTree = "<group>";
+		};
+		13160CBD28343D83005B409A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				13160CBE28343D83005B409A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13160CC728343D84005B409A /* MetaConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				13160CC828343D84005B409A /* MetaConnectTests.swift */,
+			);
+			path = MetaConnectTests;
+			sourceTree = "<group>";
+		};
+		13160CD128343D84005B409A /* MetaConnectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13160CD228343D84005B409A /* MetaConnectUITests.swift */,
+				13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */,
+			);
+			path = MetaConnectUITests;
+			sourceTree = "<group>";
+		};
+		13160CE528343DC4005B409A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				13160CE628343DC4005B409A /* Managers */,
+				13160CE828343DC4005B409A /* Extensions */,
+				13160CEA28343DC4005B409A /* Alerts */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		13160CE628343DC4005B409A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				13160CE728343DC4005B409A /* WalletConnectManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		13160CE828343DC4005B409A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13160CE928343DC4005B409A /* Color+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		13160CEA28343DC4005B409A /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				13160CEB28343DC4005B409A /* Alert.swift */,
+				13160CEC28343DC4005B409A /* WCError.swift */,
+				13160CED28343DC4005B409A /* WCAlert.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		13160CF328343DE2005B409A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13160CF428343DE2005B409A /* Buttons */,
+				13160CF628343DE2005B409A /* Modals */,
+				13160CF828343DE2005B409A /* General States */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13160CF428343DE2005B409A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				13160CF528343DE2005B409A /* MMButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		13160CF628343DE2005B409A /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				13160CF728343DE2005B409A /* WCAlertView.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		13160CF828343DE2005B409A /* General States */ = {
+			isa = PBXGroup;
+			children = (
+				13160CF928343DE2005B409A /* LoadingView.swift */,
+			);
+			path = "General States";
+			sourceTree = "<group>";
+		};
+		13160CFD28343DEC005B409A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		13160CFE28343DF4005B409A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13160CB328343D81005B409A /* MetaConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13160CD828343D84005B409A /* Build configuration list for PBXNativeTarget "MetaConnect" */;
+			buildPhases = (
+				13160CB028343D81005B409A /* Sources */,
+				13160CB128343D81005B409A /* Frameworks */,
+				13160CB228343D81005B409A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetaConnect;
+			packageProductDependencies = (
+				13160D0028343E65005B409A /* WalletConnectSwift */,
+			);
+			productName = MetaConnect;
+			productReference = 13160CB428343D81005B409A /* MetaConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13160CC328343D84005B409A /* MetaConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13160CDB28343D84005B409A /* Build configuration list for PBXNativeTarget "MetaConnectTests" */;
+			buildPhases = (
+				13160CC028343D84005B409A /* Sources */,
+				13160CC128343D84005B409A /* Frameworks */,
+				13160CC228343D84005B409A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13160CC628343D84005B409A /* PBXTargetDependency */,
+			);
+			name = MetaConnectTests;
+			productName = MetaConnectTests;
+			productReference = 13160CC428343D84005B409A /* MetaConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13160CCD28343D84005B409A /* MetaConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13160CDE28343D84005B409A /* Build configuration list for PBXNativeTarget "MetaConnectUITests" */;
+			buildPhases = (
+				13160CCA28343D84005B409A /* Sources */,
+				13160CCB28343D84005B409A /* Frameworks */,
+				13160CCC28343D84005B409A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13160CD028343D84005B409A /* PBXTargetDependency */,
+			);
+			name = MetaConnectUITests;
+			productName = MetaConnectUITests;
+			productReference = 13160CCE28343D84005B409A /* MetaConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13160CAC28343D81005B409A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					13160CB328343D81005B409A = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					13160CC328343D84005B409A = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 13160CB328343D81005B409A;
+					};
+					13160CCD28343D84005B409A = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 13160CB328343D81005B409A;
+					};
+				};
+			};
+			buildConfigurationList = 13160CAF28343D81005B409A /* Build configuration list for PBXProject "MetaConnect" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13160CAB28343D81005B409A;
+			packageReferences = (
+				13160CFF28343E65005B409A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+			);
+			productRefGroup = 13160CB528343D81005B409A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13160CB328343D81005B409A /* MetaConnect */,
+				13160CC328343D84005B409A /* MetaConnectTests */,
+				13160CCD28343D84005B409A /* MetaConnectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13160CB228343D81005B409A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13160CBF28343D83005B409A /* Preview Assets.xcassets in Resources */,
+				13160CBC28343D83005B409A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13160CC228343D84005B409A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13160CCC28343D84005B409A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13160CB028343D81005B409A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13160CEE28343DC4005B409A /* WalletConnectManager.swift in Sources */,
+				13160CFA28343DE2005B409A /* MMButton.swift in Sources */,
+				13160CE428343DB3005B409A /* ConnectionViewModel.swift in Sources */,
+				13160CF228343DC4005B409A /* WCAlert.swift in Sources */,
+				13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */,
+				13160CFC28343DE2005B409A /* LoadingView.swift in Sources */,
+				13160CE228343DA8005B409A /* ConnectionView.swift in Sources */,
+				13160CF128343DC4005B409A /* WCError.swift in Sources */,
+				13160CB828343D81005B409A /* MetaConnectApp.swift in Sources */,
+				13160CEF28343DC4005B409A /* Color+Ext.swift in Sources */,
+				13160CF028343DC4005B409A /* Alert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13160CC028343D84005B409A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13160CC928343D84005B409A /* MetaConnectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13160CCA28343D84005B409A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13160CD528343D84005B409A /* MetaConnectUITestsLaunchTests.swift in Sources */,
+				13160CD328343D84005B409A /* MetaConnectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13160CC628343D84005B409A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13160CB328343D81005B409A /* MetaConnect */;
+			targetProxy = 13160CC528343D84005B409A /* PBXContainerItemProxy */;
+		};
+		13160CD028343D84005B409A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13160CB328343D81005B409A /* MetaConnect */;
+			targetProxy = 13160CCF28343D84005B409A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13160CD628343D84005B409A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13160CD728343D84005B409A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13160CD928343D84005B409A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MetaConnect/Preview Content\"";
+				DEVELOPMENT_TEAM = Z385NCJ4YK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lightskies.MetaConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13160CDA28343D84005B409A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MetaConnect/Preview Content\"";
+				DEVELOPMENT_TEAM = Z385NCJ4YK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lightskies.MetaConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		13160CDC28343D84005B409A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z385NCJ4YK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lightskies.MetaConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetaConnect.app/MetaConnect";
+			};
+			name = Debug;
+		};
+		13160CDD28343D84005B409A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z385NCJ4YK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lightskies.MetaConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetaConnect.app/MetaConnect";
+			};
+			name = Release;
+		};
+		13160CDF28343D84005B409A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z385NCJ4YK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lightskies.MetaConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetaConnect;
+			};
+			name = Debug;
+		};
+		13160CE028343D84005B409A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z385NCJ4YK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lightskies.MetaConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetaConnect;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13160CAF28343D81005B409A /* Build configuration list for PBXProject "MetaConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13160CD628343D84005B409A /* Debug */,
+				13160CD728343D84005B409A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13160CD828343D84005B409A /* Build configuration list for PBXNativeTarget "MetaConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13160CD928343D84005B409A /* Debug */,
+				13160CDA28343D84005B409A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13160CDB28343D84005B409A /* Build configuration list for PBXNativeTarget "MetaConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13160CDC28343D84005B409A /* Debug */,
+				13160CDD28343D84005B409A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13160CDE28343D84005B409A /* Build configuration list for PBXNativeTarget "MetaConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13160CDF28343D84005B409A /* Debug */,
+				13160CE028343D84005B409A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13160CFF28343E65005B409A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13160D0028343E65005B409A /* WalletConnectSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13160CFF28343E65005B409A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
+			productName = WalletConnectSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 13160CAC28343D81005B409A /* Project object */;
+}
