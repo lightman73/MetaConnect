@@ -16,16 +16,21 @@ struct WCAlertItem {
 struct WCAlertContext {
     // - WalletConnect Alerts
     static let connectionFailed = WCAlertItem(isOk: false,
-                                              title: "Connection Failed",
-                                                 message: "Couldn't connect to MetaMask wallet. Please try again",
-                                                 buttonText: "Ok")
+                                              title: "Connection failed",
+                                              message: "Couldn't connect to MetaMask wallet. Please try again",
+                                              buttonText: "Ok")
     static let disconnected = WCAlertItem(isOk: true,
-                                        title: "Disconnected",
-                                                 message: "Disconnected from MetaMask wallet.",
-                                                 buttonText: "Ok")
+                                          title: "Disconnected",
+                                          message: "Disconnected from MetaMask wallet.",
+                                          buttonText: "Ok")
     
     static let connectionSuccess = WCAlertItem(isOk: true,
                                                title: "Connected to Wallet",
-                                            message: "You are now connected to your MetaMask wallet",
-                                            buttonText: "Ok")
+                                               message: "You are now connected to your MetaMask wallet",
+                                               buttonText: "Ok")
+    
+    static let checkMetaMaskAndAuthorize = WCAlertItem(isOk: true,
+                                                       title: "Confirmation needed",
+                                                       message: "Please open MetaMask and follow the instructions",
+                                                       buttonText: "Ok")
 }

@@ -31,10 +31,14 @@ final class ConnectionViewModel: ObservableObject {
     }
     
     func personalSignMessage() {
+        alertItem = WCAlertContext.checkMetaMaskAndAuthorize
+        
         WalletConnectManager.shared.personalSign()
     }
     
     func eth_sendTransaction() {
+        alertItem = WCAlertContext.checkMetaMaskAndAuthorize
+        
         WalletConnectManager.shared.ethSendTransaction()
     }
 }
