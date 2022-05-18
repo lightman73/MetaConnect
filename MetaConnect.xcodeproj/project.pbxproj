@@ -13,8 +13,6 @@
 		13160CC928343D84005B409A /* MetaConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CC828343D84005B409A /* MetaConnectTests.swift */; };
 		13160CD328343D84005B409A /* MetaConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CD228343D84005B409A /* MetaConnectUITests.swift */; };
 		13160CD528343D84005B409A /* MetaConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */; };
-		13160CE228343DA8005B409A /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE128343DA8005B409A /* ConnectionView.swift */; };
-		13160CE428343DB3005B409A /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE328343DB3005B409A /* ConnectionViewModel.swift */; };
 		13160CEE28343DC4005B409A /* WalletConnectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE728343DC4005B409A /* WalletConnectManager.swift */; };
 		13160CEF28343DC4005B409A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE928343DC4005B409A /* Color+Ext.swift */; };
 		13160CF028343DC4005B409A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CEB28343DC4005B409A /* Alert.swift */; };
@@ -24,6 +22,8 @@
 		13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF728343DE2005B409A /* WCAlertView.swift */; };
 		13160CFC28343DE2005B409A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF928343DE2005B409A /* LoadingView.swift */; };
 		13160D0128343E65005B409A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13160D0028343E65005B409A /* WalletConnectSwift */; };
+		13E1D0A42834DA2800328144 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1D0A22834DA2800328144 /* ConnectionViewModel.swift */; };
+		13E1D0A52834DA2800328144 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1D0A32834DA2800328144 /* ConnectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,6 @@
 		13160CCE28343D84005B409A /* MetaConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetaConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13160CD228343D84005B409A /* MetaConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectUITests.swift; sourceTree = "<group>"; };
 		13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		13160CE128343DA8005B409A /* ConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
-		13160CE328343DB3005B409A /* ConnectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
 		13160CE728343DC4005B409A /* WalletConnectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletConnectManager.swift; sourceTree = "<group>"; };
 		13160CE928343DC4005B409A /* Color+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		13160CEB28343DC4005B409A /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		13160CF728343DE2005B409A /* WCAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCAlertView.swift; sourceTree = "<group>"; };
 		13160CF928343DE2005B409A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		13160D0B2834D4AD005B409A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		13E1D0A22834DA2800328144 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
+		13E1D0A32834DA2800328144 /* ConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +121,6 @@
 				13160CE528343DC4005B409A /* Utilities */,
 				13160CF328343DE2005B409A /* Views */,
 				13160CB728343D81005B409A /* MetaConnectApp.swift */,
-				13160CE128343DA8005B409A /* ConnectionView.swift */,
-				13160CE328343DB3005B409A /* ConnectionViewModel.swift */,
 				13160CBB28343D83005B409A /* Assets.xcassets */,
 				13160CBD28343D83005B409A /* Preview Content */,
 			);
@@ -227,6 +225,7 @@
 		13160CFD28343DEC005B409A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				13E1D0A12834DA2800328144 /* ConnectionView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -236,6 +235,15 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		13E1D0A12834DA2800328144 /* ConnectionView */ = {
+			isa = PBXGroup;
+			children = (
+				13E1D0A22834DA2800328144 /* ConnectionViewModel.swift */,
+				13E1D0A32834DA2800328144 /* ConnectionView.swift */,
+			);
+			path = ConnectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,14 +384,14 @@
 			files = (
 				13160CEE28343DC4005B409A /* WalletConnectManager.swift in Sources */,
 				13160CFA28343DE2005B409A /* MMButton.swift in Sources */,
-				13160CE428343DB3005B409A /* ConnectionViewModel.swift in Sources */,
 				13160CF228343DC4005B409A /* WCAlert.swift in Sources */,
+				13E1D0A42834DA2800328144 /* ConnectionViewModel.swift in Sources */,
 				13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */,
 				13160CFC28343DE2005B409A /* LoadingView.swift in Sources */,
-				13160CE228343DA8005B409A /* ConnectionView.swift in Sources */,
 				13160CF128343DC4005B409A /* WCError.swift in Sources */,
 				13160CB828343D81005B409A /* MetaConnectApp.swift in Sources */,
 				13160CEF28343DC4005B409A /* Color+Ext.swift in Sources */,
+				13E1D0A52834DA2800328144 /* ConnectionView.swift in Sources */,
 				13160CF028343DC4005B409A /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
