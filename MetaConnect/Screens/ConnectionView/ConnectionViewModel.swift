@@ -36,7 +36,7 @@ final class ConnectionViewModel: ObservableObject {
         WalletConnectManager.shared.personalSign()
     }
     
-    func eth_sendTransaction() {
+    func ethSendTransaction() {
         alertItem = WCAlertContext.checkMetaMaskAndAuthorize
         
         WalletConnectManager.shared.ethSendTransaction()

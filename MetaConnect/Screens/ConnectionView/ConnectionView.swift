@@ -38,7 +38,7 @@ struct ConnectionView: View {
                     .controlSize(.regular)
                     
                     Button {
-                        viewModel.eth_sendTransaction()
+                        viewModel.ethSendTransaction()
                     } label: {
                         Label("Send transaction", systemImage: "paperplane")
                     }
