@@ -12,12 +12,14 @@ import SwiftUI
 struct WCAlertView: View {
     @Binding var alertItem: WCAlertItem?
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack(spacing: 0) {
             HStack {
                 if alertItem!.isOk {
                     Image(systemName: "checkmark")
-                        .font(.title)
+                        .font(.title2)
                         .symbolVariant(.circle)
                         .symbolRenderingMode(.palette)
                         .foregroundStyle(Color.brandPrimary,
@@ -36,7 +38,7 @@ struct WCAlertView: View {
                         .padding()
                 } else {
                     Image(systemName: "exclamationmark")
-                        .font(.title)
+                        .font(.title2)
                         .symbolVariant(.circle)
                         .symbolRenderingMode(.palette)
                         .foregroundStyle(Color.brandPrimary,
@@ -52,15 +54,17 @@ struct WCAlertView: View {
                     
                 
                 Text(alertItem!.title)
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.semibold)
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(.brandPrimary)
+                
+                Spacer()
             }
             .padding()
             
             Text(alertItem!.message)
-                .font(.title3)
+                .font(.headline)
                 .padding([.vertical])
                 .padding([.horizontal], 10)
             
@@ -76,7 +80,12 @@ struct WCAlertView: View {
             .padding([.vertical], 10)
         }
         .frame(width: 300)
-        .background(Color(.systemBackground))
+        .background(LinearGradient(
+            gradient: Gradient(stops: [
+                .init(color: .brandPrimary, location: colorScheme == .light ? -7 : -1.5),
+                .init(color: Color(.systemBackground), location: colorScheme == .light ? 0.7 : 3)]),
+            startPoint: .top,
+            endPoint: .bottom))
         .cornerRadius(20)
         .shadow(radius: 40)
     }

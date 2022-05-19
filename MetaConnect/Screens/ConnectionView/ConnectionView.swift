@@ -10,6 +10,8 @@ import SwiftUI
 struct ConnectionView: View {
     @StateObject var viewModel = ConnectionViewModel()
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         ZStack {
             if !viewModel.isConnected {
@@ -58,15 +60,6 @@ struct ConnectionView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .blur(radius: viewModel.alertItem != nil ? 20 : 0)
-                /// Overlay should be present only in dark mode.
-//                .overlay {
-//                    if viewModel.alertItem != nil {
-//                        Rectangle()
-//                            .foregroundColor(Color(red: 0, green: 0, blue: 0, opacity: 0.7))
-//                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                    }
-//                }
-                
             }
             
             if viewModel.isLoading {
@@ -80,8 +73,8 @@ struct ConnectionView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(LinearGradient(
             gradient: Gradient(stops: [
-                .init(color: .brandPrimary.opacity(0.1), location: 0),
-                .init(color: .clear, location: 0.7)]),
+                .init(color: .brandPrimary.opacity(colorScheme == .light ? 0.1 : 0.7), location: 0),
+                .init(color: .clear, location: colorScheme == .light ? 0.7 : 2)]),
             startPoint: .top,
             endPoint: .bottom))
     }
@@ -90,6 +83,6 @@ struct ConnectionView: View {
 struct ConnectionView_Previews: PreviewProvider {
     static var previews: some View {
         ConnectionView()
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
     }
 }
