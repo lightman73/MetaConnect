@@ -9,6 +9,8 @@ import SwiftUI
 
 @MainActor
 final class ConnectionViewModel: ObservableObject {
+    @Environment(\.openURL) var openURL
+    
     // - Might collapse isLoading and isConnected to a single enum
     @Published var isLoading: Bool = false
     @Published var isConnected: Bool = false
@@ -31,15 +33,32 @@ final class ConnectionViewModel: ObservableObject {
     }
     
     func personalSignMessage() {
-        alertItem = WCAlertContext.checkMetaMaskAndAuthorize
+        // alertItem = WCAlertContext.checkMetaMaskAndAuthorize
         
         WalletConnectManager.shared.personalSign()
+        
+        openMetaMask()
     }
     
     func ethSendTransaction() {
-        alertItem = WCAlertContext.checkMetaMaskAndAuthorize
+        // alertItem = WCAlertContext.checkMetaMaskAndAuthorize
         
         WalletConnectManager.shared.ethSendTransaction()
+        
+        openMetaMask()
+    }
+    
+    private func openMetaMask() {
+        // Should use universal link to open MetaMask, maybe
+        let wcLinkUrl = "wc://wc"
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            guard let url = URL(string: wcLinkUrl) else {
+                return
+            }
+            
+            self.openURL(url)
+        }
     }
 }
 
