@@ -22,6 +22,7 @@
 		13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF728343DE2005B409A /* WCAlertView.swift */; };
 		13160CFC28343DE2005B409A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF928343DE2005B409A /* LoadingView.swift */; };
 		13160D0128343E65005B409A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13160D0028343E65005B409A /* WalletConnectSwift */; };
+		13BB0D262837AA4600FA9705 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13BB0D252837AA4600FA9705 /* CryptoSwift */; };
 		13E1D0A42834DA2800328144 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1D0A22834DA2800328144 /* ConnectionViewModel.swift */; };
 		13E1D0A52834DA2800328144 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1D0A32834DA2800328144 /* ConnectionView.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13160D0128343E65005B409A /* WalletConnectSwift in Frameworks */,
+				13BB0D262837AA4600FA9705 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +266,7 @@
 			name = MetaConnect;
 			packageProductDependencies = (
 				13160D0028343E65005B409A /* WalletConnectSwift */,
+				13BB0D252837AA4600FA9705 /* CryptoSwift */,
 			);
 			productName = MetaConnect;
 			productReference = 13160CB428343D81005B409A /* MetaConnect.app */;
@@ -339,6 +342,7 @@
 			mainGroup = 13160CAB28343D81005B409A;
 			packageReferences = (
 				13160CFF28343E65005B409A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+				13BB0D242837AA4600FA9705 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 13160CB528343D81005B409A /* Products */;
 			projectDirPath = "";
@@ -727,6 +731,14 @@
 				kind = branch;
 			};
 		};
+		13BB0D242837AA4600FA9705 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -734,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 13160CFF28343E65005B409A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
 			productName = WalletConnectSwift;
+		};
+		13BB0D252837AA4600FA9705 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13BB0D242837AA4600FA9705 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
