@@ -15,6 +15,7 @@ final class ConnectionViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var isConnected: Bool = false
     @Published var alertItem: WCAlertItem?
+    @Published var messageToSign: String = "Hello there"
     
     init() {
         WalletConnectManager.shared.delegate = self
@@ -34,8 +35,13 @@ final class ConnectionViewModel: ObservableObject {
     
     func personalSignMessage() {
         // alertItem = WCAlertContext.checkMetaMaskAndAuthorize
+        WalletConnectManager.shared.personalSign(messageToSign)
         
-        WalletConnectManager.shared.personalSign()
+        openMetaMask()
+    }
+    
+    func ethSignMessage() {
+        WalletConnectManager.shared.ethSign(messageToSign)
         
         openMetaMask()
     }

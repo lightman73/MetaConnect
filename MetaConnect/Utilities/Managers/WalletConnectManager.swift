@@ -7,6 +7,8 @@
 
 import SwiftUI
 import WalletConnectSwift
+import CryptoSwift
+
 
 protocol WalletConnectManagerDelegate {
     func failedToOpenMetaMask()
@@ -85,11 +87,36 @@ final class WalletConnectManager {
     }
     
     
-    func personalSign() {
+    func personalSign(_ messageToSign: String = "Hello there") {
+        // TODO: ^ Should be a rethrows, and should be handled
+        
+        let fullMessage = "\u{19}Ethereum Signed Message:\n\(messageToSign.count)\(messageToSign)"
+        let keccak256Hash = fullMessage.bytes.sha3(.keccak256).toHexString()
+        
+        print("personalSign, message: \(messageToSign)")
+        print("Full message: \(fullMessage)")
+        print("Keccak256: \(keccak256Hash)")
+        print(messageToSign.bytes.sha3(.keccak256).toHexString())
+        
+        // shouldn't be a forced try
+        try? client.personal_sign(url: session.url, message: messageToSign, account: session.walletInfo!.accounts[0]) {
+            [weak self] response in
+            self?.handleReponse(response, expecting: "Signature")
+        }
+    }
+    
+    func ethSign(_ messageToSign: String = "Hello there") {
         // TODO: ^ Should be a rethrows, and should be handled
         
         // shouldn't be a forced try
-        try? client.personal_sign(url: session.url, message: "Hello there!", account: session.walletInfo!.accounts[0]) {
+        /// message should be the 32 bytes keccak256 hash for ethSign, so for "Hello there", it is "0x008cd552e9e10023c6fd4bb49b4f210ca2d89846d76efa98a8b4f87b9af72825"
+        
+        let keccak256Hash = messageToSign.bytes.sha3(.keccak256).toHexString()
+        
+        print("ethSign, message: \(messageToSign)")
+        print("Keccak256: \(keccak256Hash)")
+        
+        try? client.eth_sign(url: session.url, account: session.walletInfo!.accounts[0], message: "\(keccak256Hash)") {
             [weak self] response in
             self?.handleReponse(response, expecting: "Signature")
         }

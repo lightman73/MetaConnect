@@ -29,6 +29,20 @@ struct ConnectionView: View {
                     
                     Spacer()
                     
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Message to sign:")
+                            .font(.body)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.brandPrimary)
+                            .padding([.leading], 1)
+                        
+                        TextField("Message to sign", text: $viewModel.messageToSign)
+                            .foregroundColor(.brandPrimary)
+                            .textFieldStyle(.roundedBorder)
+                            .background(.clear)
+                    }
+                    .padding([.horizontal, .bottom], 20)
+                    
                     Button {
                         viewModel.personalSignMessage()
                     } label: {
@@ -38,6 +52,17 @@ struct ConnectionView: View {
                     .buttonStyle(.bordered)
                     .buttonBorderShape(.roundedRectangle(radius: 1000))
                     .controlSize(.regular)
+                    
+                    Button {
+                        viewModel.ethSignMessage()
+                    } label: {
+                        Label("Eth sign message", systemImage: "signature")
+                    }
+                    .tint(.brandPrimary)
+                    .buttonStyle(.bordered)
+                    .buttonBorderShape(.roundedRectangle(radius: 1000))
+                    .controlSize(.regular)
+                    .padding([.bottom], 30)
                     
                     Button {
                         viewModel.ethSendTransaction()
