@@ -12,20 +12,30 @@ struct ConnectionView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    let metamaskImage = "metamask-fox"
+    
     var body: some View {
         ZStack {
             if !viewModel.isConnected {
                 Button {
                     viewModel.connect()
                 } label: {
-                    MMButton(title: "Connect", image: "metamask-fox")
+                    MMButton(title: "Connect", image: metamaskImage)
                 }
             } else {
-                VStack {
-                    Text("Connected")
-                        .font(.title2)
-                        .foregroundColor(.brandPrimary)
-                        .padding([.top], 20)
+                VStack(alignment: .center) {
+                    HStack(spacing: 5) {
+                        Text("Connected to MetaMask")
+                            .font(.title2)
+                            .foregroundColor(.brandPrimary)
+                        Image(metamaskImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50)
+                            .padding([.trailing], 15)
+                            .padding([.vertical], -10)
+                    }
+                    .padding([.top], 30)
                     
                     Spacer()
                     
