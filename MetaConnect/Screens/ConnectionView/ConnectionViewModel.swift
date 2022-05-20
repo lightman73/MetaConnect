@@ -34,7 +34,6 @@ final class ConnectionViewModel: ObservableObject {
     }
     
     func personalSignMessage() {
-        // alertItem = WCAlertContext.checkMetaMaskAndAuthorize
         WalletConnectManager.shared.personalSign(messageToSign)
         
         openMetaMask()
@@ -47,8 +46,6 @@ final class ConnectionViewModel: ObservableObject {
     }
     
     func ethSendTransaction() {
-        // alertItem = WCAlertContext.checkMetaMaskAndAuthorize
-        
         WalletConnectManager.shared.ethSendTransaction()
         
         openMetaMask()

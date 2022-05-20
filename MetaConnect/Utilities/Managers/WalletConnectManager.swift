@@ -108,7 +108,6 @@ final class WalletConnectManager {
     func ethSign(_ messageToSign: String = "Hello there") {
         // TODO: ^ Should be a rethrows, and should be handled
         
-        // shouldn't be a forced try
         /// message should be the 32 bytes keccak256 hash for ethSign, so for "Hello there", it is "0x008cd552e9e10023c6fd4bb49b4f210ca2d89846d76efa98a8b4f87b9af72825"
         
         let keccak256Hash = messageToSign.bytes.sha3(.keccak256).toHexString()
@@ -116,6 +115,7 @@ final class WalletConnectManager {
         print("ethSign, message: \(messageToSign)")
         print("Keccak256: \(keccak256Hash)")
         
+        // shouldn't be a forced try
         try? client.eth_sign(url: session.url, account: session.walletInfo!.accounts[0], message: "\(keccak256Hash)") {
             [weak self] response in
             self?.handleReponse(response, expecting: "Signature")
