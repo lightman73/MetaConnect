@@ -15,11 +15,9 @@
 		13160CD528343D84005B409A /* MetaConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */; };
 		13160CEE28343DC4005B409A /* WalletConnectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE728343DC4005B409A /* WalletConnectManager.swift */; };
 		13160CEF28343DC4005B409A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CE928343DC4005B409A /* Color+Ext.swift */; };
-		13160CF028343DC4005B409A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CEB28343DC4005B409A /* Alert.swift */; };
-		13160CF128343DC4005B409A /* WCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CEC28343DC4005B409A /* WCError.swift */; };
-		13160CF228343DC4005B409A /* WCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CED28343DC4005B409A /* WCAlert.swift */; };
+		13160CF228343DC4005B409A /* MCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CED28343DC4005B409A /* MCAlert.swift */; };
 		13160CFA28343DE2005B409A /* MMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF528343DE2005B409A /* MMButton.swift */; };
-		13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF728343DE2005B409A /* WCAlertView.swift */; };
+		13160CFB28343DE2005B409A /* MCAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF728343DE2005B409A /* MCAlertView.swift */; };
 		13160CFC28343DE2005B409A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13160CF928343DE2005B409A /* LoadingView.swift */; };
 		13160D0128343E65005B409A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13160D0028343E65005B409A /* WalletConnectSwift */; };
 		13BB0D262837AA4600FA9705 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13BB0D252837AA4600FA9705 /* CryptoSwift */; };
@@ -56,11 +54,9 @@
 		13160CD428343D84005B409A /* MetaConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13160CE728343DC4005B409A /* WalletConnectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletConnectManager.swift; sourceTree = "<group>"; };
 		13160CE928343DC4005B409A /* Color+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
-		13160CEB28343DC4005B409A /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		13160CEC28343DC4005B409A /* WCError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCError.swift; sourceTree = "<group>"; };
-		13160CED28343DC4005B409A /* WCAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCAlert.swift; sourceTree = "<group>"; };
+		13160CED28343DC4005B409A /* MCAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCAlert.swift; sourceTree = "<group>"; };
 		13160CF528343DE2005B409A /* MMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMButton.swift; sourceTree = "<group>"; };
-		13160CF728343DE2005B409A /* WCAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCAlertView.swift; sourceTree = "<group>"; };
+		13160CF728343DE2005B409A /* MCAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCAlertView.swift; sourceTree = "<group>"; };
 		13160CF928343DE2005B409A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		13160D0B2834D4AD005B409A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		13E1D0A22834DA2800328144 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
@@ -183,9 +179,7 @@
 		13160CEA28343DC4005B409A /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
-				13160CEB28343DC4005B409A /* Alert.swift */,
-				13160CEC28343DC4005B409A /* WCError.swift */,
-				13160CED28343DC4005B409A /* WCAlert.swift */,
+				13160CED28343DC4005B409A /* MCAlert.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -211,7 +205,7 @@
 		13160CF628343DE2005B409A /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				13160CF728343DE2005B409A /* WCAlertView.swift */,
+				13160CF728343DE2005B409A /* MCAlertView.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -388,15 +382,13 @@
 			files = (
 				13160CEE28343DC4005B409A /* WalletConnectManager.swift in Sources */,
 				13160CFA28343DE2005B409A /* MMButton.swift in Sources */,
-				13160CF228343DC4005B409A /* WCAlert.swift in Sources */,
+				13160CF228343DC4005B409A /* MCAlert.swift in Sources */,
 				13E1D0A42834DA2800328144 /* ConnectionViewModel.swift in Sources */,
-				13160CFB28343DE2005B409A /* WCAlertView.swift in Sources */,
+				13160CFB28343DE2005B409A /* MCAlertView.swift in Sources */,
 				13160CFC28343DE2005B409A /* LoadingView.swift in Sources */,
-				13160CF128343DC4005B409A /* WCError.swift in Sources */,
 				13160CB828343D81005B409A /* MetaConnectApp.swift in Sources */,
 				13160CEF28343DC4005B409A /* Color+Ext.swift in Sources */,
 				13E1D0A52834DA2800328144 /* ConnectionView.swift in Sources */,
-				13160CF028343DC4005B409A /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

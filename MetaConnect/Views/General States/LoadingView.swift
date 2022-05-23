@@ -1,6 +1,6 @@
 //
 //  LoadingView.swift
-//  WalletConnectTest
+//  MetaConnect
 //
 //  Created by Francesco Marini on 17/05/22.
 //

@@ -1,6 +1,6 @@
 //
-//  WCAlertView.swift
-//  WalletConnectTest
+//  MCAlertView.swift
+//  MetaConnect
 //
 //  Created by Francesco Marini on 17/05/22.
 //
@@ -9,8 +9,8 @@
 
 import SwiftUI
 
-struct WCAlertView: View {
-    @Binding var alertItem: WCAlertItem?
+struct MCAlertView: View {
+    @Binding var alertItem: MCAlertItem?
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -93,7 +93,7 @@ struct WCAlertView: View {
 
 struct WCAlertView_Previews: PreviewProvider {
     static var previews: some View {
-        WCAlertView(alertItem: .constant(WCAlertItem(isOk: true, title: "A really long test title", message: "A really, really, really, long test message", buttonText: "Ok"))) //, isShowing: .constant(true))
+        MCAlertView(alertItem: .constant(MCAlertItem(isOk: true, title: "A really long test title", message: "A really, really, really, long test message", buttonText: "Ok"))) //, isShowing: .constant(true))
     }
 }
 

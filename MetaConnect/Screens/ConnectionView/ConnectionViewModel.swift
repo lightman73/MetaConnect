@@ -1,6 +1,6 @@
 //
 //  ConnectionViewModel.swift
-//  WalletConnectTest
+//  MetaConnect
 //
 //  Created by Francesco Marini on 17/05/22.
 //
@@ -14,7 +14,7 @@ final class ConnectionViewModel: ObservableObject {
     // - Might collapse isLoading and isConnected to a single enum
     @Published var isLoading: Bool = false
     @Published var isConnected: Bool = false
-    @Published var alertItem: WCAlertItem?
+    @Published var alertItem: MCAlertItem?
     @Published var messageToSign: String = "Hello there"
     
     init() {
@@ -113,7 +113,7 @@ extension ConnectionViewModel: WalletConnectManagerDelegate {
         print("Did receive response")
         
         Task {
-            self.alertItem = WCAlertItem(isOk: true, title: title, message: message, buttonText: "Ok")
+            self.alertItem = MCAlertItem(isOk: true, title: title, message: message, buttonText: "Ok")
         }
     }
     
@@ -121,7 +121,7 @@ extension ConnectionViewModel: WalletConnectManagerDelegate {
         print("Did receive error")
         
         Task {
-            self.alertItem = WCAlertItem(isOk: false, title: "Error", message: message, buttonText: "Ok")
+            self.alertItem = MCAlertItem(isOk: false, title: "Error", message: message, buttonText: "Ok")
         }
     }
     

@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  WalletConnectTest
+//  MetaConnect
 //
 //  Created by Francesco Marini on 17/05/22.
 //
@@ -102,7 +102,7 @@ struct ConnectionView: View {
             }
             
             if viewModel.alertItem != nil {
-                WCAlertView(alertItem: $viewModel.alertItem)
+                MCAlertView(alertItem: $viewModel.alertItem)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
