@@ -48,7 +48,7 @@ final class WalletConnectManager {
                            key: try! randomKey())
         
         let clientMeta = Session.ClientMeta(name: "MetaConnect",
-                                            description: "YCY MetaConnect",
+                                            description: "MetaConnect",
                                             icons: [],
                                             url: URL(string: "https://safe.gnosis.io")!)
         
@@ -62,10 +62,12 @@ final class WalletConnectManager {
         try! client.connect(to: wcUrl)
         
         /// https://docs.walletconnect.org/mobile-linking#for-ios
-        /// **NOTE**: Majority of wallets support universal links that you should normally use in production application
+        /// **NOTE**: Using URL scheme link. Might use a universal link, but it seems that MetaMask is having some problems atm
+        ///  see: https://github.com/MetaMask/metamask-mobile/issues/3965
         let wcLinkUrl = "wc://wc?uri=\(wcUrl.absoluteString)"
         ///  let universalLinkUrl = "https://metamask.app.link/wc?uri=\(connectionUrl)"
 
+        /// **NOTE**: Using SwiftUI openURL, in a UIKit app, might be better to use UIApplication.shared.canOpenURL/open
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             guard let url = URL(string: wcLinkUrl) else {
                 return
