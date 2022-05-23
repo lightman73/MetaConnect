@@ -27,16 +27,26 @@ final class WalletConnectManager {
     var session: Session!
     var delegate: WalletConnectManagerDelegate?
 
+    // gnosis wc bridge: https://safe-walletconnect.gnosis.io/
+    // test bridge with latest protocol version: https://bridge.walletconnect.org
+    var bridgeURL = "https://safe-walletconnect.gnosis.io/"
+
     var walletAccount: String {
         return session.walletInfo!.accounts[0]
     }
     
     let sessionKey = "sessionKey"
     
-    // gnosis wc bridge: https://safe-walletconnect.gnosis.io/
-    // test bridge with latest protocol version: https://bridge.walletconnect.org
-    let bridgeURL = "https://safe-walletconnect.gnosis.io/"
+    
+    init(delegate: WalletConnectManagerDelegate, bridgeURL: String?) {
+        self.delegate = delegate
+        
+        guard let bridgeURL = bridgeURL else {
+            return
+        }
 
+        self.bridgeURL = bridgeURL
+    }
     
     private init() {}
 
